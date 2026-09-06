@@ -34,6 +34,16 @@ export default async function HousingPage({
     data: { user },
   } = await supabase.auth.getUser();
 
+  let isVerified = false;
+  if (user) {
+    const { data: myProfile } = await supabase
+      .from("profiles")
+      .select("linkedin_verified, employer_verified")
+      .eq("id", user.id)
+      .maybeSingle();
+    isVerified = Boolean(myProfile?.linkedin_verified || myProfile?.employer_verified);
+  }
+
   let listings: {
     id: string;
     kind: string;
@@ -105,37 +115,50 @@ export default async function HousingPage({
           />
         ) : (
           <ul className="grid gap-3 sm:grid-cols-2">
-            {listings.map((l) => (
-              <li key={l.id} className="overflow-hidden rounded-xl border border-[var(--color-neutral-border)] bg-[var(--color-surface)]">
-                <Link href={`/housing/${l.id}`} className="block hover:opacity-95">
-                  {l.photos && l.photos.length > 0 && (
-                    <div className="relative h-40 w-full bg-[var(--color-base)]">
-                      <Image src={l.photos[0]} alt={l.title} fill className="object-cover" />
+            {listings.map((l) => {
+              const isLockedHandover = l.kind === "handover" && !isVerified;
+              return (
+                <li key={l.id} className="overflow-hidden rounded-xl border border-[var(--color-neutral-border)] bg-[var(--color-surface)]">
+                  <Link href={`/housing/${l.id}`} className="block hover:opacity-95">
+                    {l.photos && l.photos.length > 0 && (
+                      <div className="relative h-40 w-full bg-[var(--color-base)]">
+                        <Image
+                          src={l.photos[0]}
+                          alt={l.title}
+                          fill
+                          className={`object-cover ${isLockedHandover ? "blur-md" : ""}`}
+                        />
+                        {isLockedHandover && (
+                          <div className="absolute inset-0 flex items-center justify-center bg-black/20 text-2xl">🔒</div>
+                        )}
+                      </div>
+                    )}
+                    <div className="p-4 pb-2">
+                      <p className="text-xs uppercase tracking-wide text-[var(--color-neutral-light)]">
+                        {KIND_LABEL[l.kind] ?? l.kind}
+                      </p>
+                      <p className="mt-1 font-medium text-[var(--color-ink)]">
+                        {isLockedHandover ? "🔒 verify to view" : l.title}
+                      </p>
+                      <p className="text-sm text-[var(--color-neutral)]">
+                        {l.neighborhood}
+                        {l.price ? ` · €${l.price}/mo` : ""}
+                      </p>
+                    </div>
+                  </Link>
+                  {user && user.id !== l.author_id && !isLockedHandover && (
+                    <div className="px-4 pb-4">
+                      <MessagePosterButton
+                        toId={l.author_id}
+                        contextType="housing_listing"
+                        contextId={l.id}
+                        returnTo="/housing"
+                      />
                     </div>
                   )}
-                  <div className="p-4 pb-2">
-                    <p className="text-xs uppercase tracking-wide text-[var(--color-neutral-light)]">
-                      {KIND_LABEL[l.kind] ?? l.kind}
-                    </p>
-                    <p className="mt-1 font-medium text-[var(--color-ink)]">{l.title}</p>
-                    <p className="text-sm text-[var(--color-neutral)]">
-                      {l.neighborhood}
-                      {l.price ? ` · €${l.price}/mo` : ""}
-                    </p>
-                  </div>
-                </Link>
-                {user && user.id !== l.author_id && (
-                  <div className="px-4 pb-4">
-                    <MessagePosterButton
-                      toId={l.author_id}
-                      contextType="housing_listing"
-                      contextId={l.id}
-                      returnTo="/housing"
-                    />
-                  </div>
-                )}
-              </li>
-            ))}
+                </li>
+              );
+            })}
           </ul>
         )}
       </div>

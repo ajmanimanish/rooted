@@ -5,6 +5,15 @@ import EmptyState from "@/components/EmptyState";
 import TrustedToggle from "@/components/TrustedToggle";
 import WidenedScopeBanner from "@/components/WidenedScopeBanner";
 
+type QuestionRow = {
+  id: string;
+  title: string;
+  topic: string | null;
+  format: string;
+  question_options: { votes: { id: string }[] }[];
+  deep_answers: { id: string }[];
+};
+
 export default async function KnowledgePage({
   searchParams,
 }: {
@@ -18,9 +27,10 @@ export default async function KnowledgePage({
     data: { user },
   } = await supabase.auth.getUser();
 
-  let questions: { id: string; title: string; topic: string | null; question_options: { votes: { id: string }[] }[] }[] = [];
+  let questions: QuestionRow[] = [];
   let widened = false;
   let trustedCount = 0;
+  const selectCols = "id, title, topic, format, question_options(votes(id)), deep_answers(id)";
 
   if (showTrusted && user) {
     const ids = await fetchTrustedItemIds(supabase, "question", user.id);
@@ -28,10 +38,10 @@ export default async function KnowledgePage({
     if (ids.length >= NEVER_EMPTY_THRESHOLD) {
       const { data } = await supabase
         .from("questions")
-        .select("id, title, topic, question_options(votes(id))")
+        .select(selectCols)
         .in("id", ids)
         .order("created_at", { ascending: false });
-      questions = data ?? [];
+      questions = (data ?? []) as unknown as QuestionRow[];
     } else {
       widened = true;
     }
@@ -40,10 +50,20 @@ export default async function KnowledgePage({
   if (!showTrusted || widened) {
     const { data } = await supabase
       .from("questions")
-      .select("id, title, topic, question_options(votes(id))")
+      .select(selectCols)
       .order("created_at", { ascending: false });
-    questions = data ?? [];
+    questions = (data ?? []) as unknown as QuestionRow[];
   }
+
+  const judgmentCalls = questions.filter((q) => q.format === "deep_answer");
+  const polls = questions.filter((q) => q.format !== "deep_answer");
+
+  const byTopic = new Map<string, QuestionRow[]>();
+  for (const q of polls) {
+    const key = q.topic || "General";
+    byTopic.set(key, [...(byTopic.get(key) ?? []), q]);
+  }
+  const topics = [...byTopic.keys()].sort();
 
   return (
     <main className="mx-auto w-full max-w-3xl flex-1 px-4 py-10">
@@ -57,7 +77,7 @@ export default async function KnowledgePage({
         </Link>
       </div>
       <p className="mt-1 text-sm text-[var(--color-neutral)]">
-        Poll-style questions with votes and short tips, peer-weighted by the groups people belong to.
+        Quick, verified answers. A tap is a full contribution — write a line only if you have one.
       </p>
 
       {user && (
@@ -75,25 +95,55 @@ export default async function KnowledgePage({
             ctaLabel="Ask a question"
           />
         ) : (
-          <ul className="flex flex-col gap-3">
-            {questions.map((q) => {
-              const voteCount = q.question_options.reduce((sum, o) => sum + o.votes.length, 0);
-              return (
-                <li key={q.id}>
-                  <Link
-                    href={`/knowledge/${q.id}`}
-                    className="block rounded-xl border border-[var(--color-neutral-border)] bg-[var(--color-surface)] p-4 hover:border-[var(--color-primary)]"
-                  >
-                    {q.topic && (
-                      <p className="text-xs uppercase tracking-wide text-[var(--color-neutral-light)]">{q.topic}</p>
-                    )}
-                    <p className="mt-1 font-medium text-[var(--color-ink)]">{q.title}</p>
-                    <p className="text-sm text-[var(--color-neutral)]">{voteCount} votes</p>
-                  </Link>
-                </li>
-              );
-            })}
-          </ul>
+          <>
+            {topics.map((topic) => (
+              <section key={topic} className="mb-8">
+                <h2 className="text-xs font-semibold uppercase tracking-wide text-[var(--color-neutral-light)]">
+                  {topic}
+                </h2>
+                <ul className="mt-2 flex flex-col gap-2">
+                  {byTopic.get(topic)!.map((q) => {
+                    const voteCount = q.question_options.reduce((sum, o) => sum + o.votes.length, 0);
+                    return (
+                      <li key={q.id}>
+                        <Link
+                          href={`/knowledge/${q.id}`}
+                          className="block rounded-xl border border-[var(--color-neutral-border)] bg-[var(--color-surface)] p-4 hover:border-[var(--color-primary)]"
+                        >
+                          <p className="font-medium text-[var(--color-ink)]">{q.title}</p>
+                          <p className="text-sm text-[var(--color-neutral)]">{voteCount} votes</p>
+                        </Link>
+                      </li>
+                    );
+                  })}
+                </ul>
+              </section>
+            ))}
+
+            {judgmentCalls.length > 0 && (
+              <section>
+                <h2 className="text-xs font-semibold uppercase tracking-wide text-[var(--color-neutral-light)]">
+                  Judgment calls
+                </h2>
+                <p className="text-xs text-[var(--color-neutral-light)]">rare, written by people who&apos;ve done it</p>
+                <ul className="mt-2 flex flex-col gap-2">
+                  {judgmentCalls.map((q) => (
+                    <li key={q.id}>
+                      <Link
+                        href={`/knowledge/${q.id}`}
+                        className="block rounded-xl border border-[var(--color-neutral-border)] bg-[var(--color-surface)] p-4 hover:border-[var(--color-primary)]"
+                      >
+                        <p className="font-medium text-[var(--color-ink)]">{q.title}</p>
+                        <p className="text-sm text-[var(--color-primary-deep)]">
+                          {q.deep_answers.length} written answer{q.deep_answers.length === 1 ? "" : "s"} →
+                        </p>
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </section>
+            )}
+          </>
         )}
       </div>
     </main>

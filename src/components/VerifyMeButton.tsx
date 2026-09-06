@@ -5,7 +5,13 @@ import Link from "next/link";
 
 // Contextual modal, not a standalone page — matches the prototype's pattern
 // of surfacing verification exactly when it's relevant, not as a dead-end page.
-export default function VerifyMeButton({ isSignedIn }: { isSignedIn: boolean }) {
+export default function VerifyMeButton({
+  isSignedIn,
+  label = "Verify me",
+}: {
+  isSignedIn: boolean;
+  label?: string;
+}) {
   const [open, setOpen] = useState(false);
 
   return (
@@ -14,7 +20,7 @@ export default function VerifyMeButton({ isSignedIn }: { isSignedIn: boolean }) 
         onClick={() => setOpen(true)}
         className="rounded-full bg-[var(--color-accent)] px-4 py-1.5 text-sm font-medium text-white hover:opacity-90"
       >
-        Verify me
+        {label}
       </button>
 
       {open && (

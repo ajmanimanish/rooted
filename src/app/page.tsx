@@ -3,6 +3,8 @@ import { createClient } from "@/lib/supabase/server";
 import { fetchSuggestedGroups } from "@/lib/auth";
 import { joinGroup } from "@/app/groups/actions";
 import StageSelector from "@/components/StageSelector";
+import IntelTicker from "@/components/IntelTicker";
+import ChecklistWidget from "@/components/ChecklistWidget";
 
 const STAGE_COPY: Record<string, string> = {
   just_arrived: "Here's what people usually sort out in the first few weeks.",
@@ -83,6 +85,18 @@ export default async function Home() {
     const { data: vouches } = await supabase.from("vouches").select("vouchee_id").in("vouchee_id", requesterIds);
     for (const v of vouches ?? []) vouchCounts.set(v.vouchee_id, (vouchCounts.get(v.vouchee_id) ?? 0) + 1);
   }
+
+  const { data: intelItems } = await supabase
+    .from("intel_items")
+    .select("id, category, label, value, created_at")
+    .order("created_at", { ascending: false })
+    .limit(5);
+
+  const { data: checklistDone } = await supabase
+    .from("checklist_progress")
+    .select("item_key")
+    .eq("profile_id", user.id);
+  const completedKeys = (checklistDone ?? []).map((c) => c.item_key);
 
   return (
     <main className="mx-auto w-full max-w-3xl flex-1 px-4 py-10">
@@ -227,6 +241,9 @@ export default async function Home() {
           </div>
         )}
       </section>
+
+      <IntelTicker items={intelItems ?? []} />
+      <ChecklistWidget completedKeys={completedKeys} />
     </main>
   );
 }
