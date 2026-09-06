@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 import { createClient } from "@/lib/supabase/server";
 import { fetchTrustedItemIds, NEVER_EMPTY_THRESHOLD } from "@/lib/items";
 import EmptyState from "@/components/EmptyState";
@@ -7,6 +6,7 @@ import TrustedToggle from "@/components/TrustedToggle";
 import WidenedScopeBanner from "@/components/WidenedScopeBanner";
 import KindFilterTabs from "@/components/KindFilterTabs";
 import MessagePosterButton from "@/components/MessagePosterButton";
+import PhotoCarousel from "@/components/PhotoCarousel";
 
 const KIND_LABEL: Record<string, string> = {
   available: "Available",
@@ -121,17 +121,7 @@ export default async function HousingPage({
                 <li key={l.id} className="overflow-hidden rounded-xl border border-[var(--color-neutral-border)] bg-[var(--color-surface)]">
                   <Link href={`/housing/${l.id}`} className="block hover:opacity-95">
                     {l.photos && l.photos.length > 0 && (
-                      <div className="relative h-40 w-full bg-[var(--color-base)]">
-                        <Image
-                          src={l.photos[0]}
-                          alt={l.title}
-                          fill
-                          className={`object-cover ${isLockedHandover ? "blur-md" : ""}`}
-                        />
-                        {isLockedHandover && (
-                          <div className="absolute inset-0 flex items-center justify-center bg-black/20 text-2xl">🔒</div>
-                        )}
-                      </div>
+                      <PhotoCarousel photos={l.photos} alt={l.title} blurred={isLockedHandover} />
                     )}
                     <div className="p-4 pb-2">
                       <p className="text-xs uppercase tracking-wide text-[var(--color-neutral-light)]">

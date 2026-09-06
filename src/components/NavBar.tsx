@@ -2,6 +2,8 @@ import Link from "next/link";
 import { createClient } from "@/lib/supabase/server";
 import CreateMenu from "@/components/CreateMenu";
 import VerifyMeButton from "@/components/VerifyMeButton";
+import SearchButton from "@/components/SearchButton";
+import HelpButton from "@/components/HelpButton";
 
 const SECTIONS = [
   { href: "/groups", label: "Groups" },
@@ -49,6 +51,8 @@ export default async function NavBar() {
         </nav>
 
         <div className="ml-auto flex items-center gap-3">
+          <SearchButton />
+          <HelpButton />
           {user && <CreateMenu />}
 
           {!isVerified && <VerifyMeButton isSignedIn={Boolean(user)} />}

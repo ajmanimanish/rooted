@@ -1,11 +1,11 @@
 import Link from "next/link";
-import Image from "next/image";
 import { createClient } from "@/lib/supabase/server";
 import EmptyState from "@/components/EmptyState";
 import { toggleSold } from "@/app/marketplace/actions";
 import DemoBadge from "@/components/DemoBadge";
 import KindFilterTabs from "@/components/KindFilterTabs";
 import MessagePosterButton from "@/components/MessagePosterButton";
+import PhotoCarousel from "@/components/PhotoCarousel";
 
 const STATUS_OPTIONS = [
   { value: "all", label: "All" },
@@ -63,11 +63,7 @@ export default async function MarketplacePage({
                   key={l.id}
                   className={`overflow-hidden rounded-xl border border-[var(--color-neutral-border)] bg-[var(--color-surface)] ${l.status === "sold" ? "opacity-60" : ""}`}
                 >
-                  {photos.length > 0 && (
-                    <div className="relative h-40 w-full bg-[var(--color-base)]">
-                      <Image src={photos[0]} alt={l.title} fill className="object-cover" />
-                    </div>
-                  )}
+                  {photos.length > 0 && <PhotoCarousel photos={photos} alt={l.title} />}
                   <div className="p-4">
                     <p className="font-medium text-[var(--color-ink)]">{l.title}</p>
                     <p className="text-sm text-[var(--color-neutral)]">
