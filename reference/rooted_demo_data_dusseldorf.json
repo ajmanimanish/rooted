@@ -1,0 +1,1386 @@
+[
+  {
+    "id": "u001",
+    "_demo": true,
+    "name": "Priya Patel",
+    "initials": "PP",
+    "originCountry": "India",
+    "originRegion": "South Asia",
+    "geo": {
+      "country": "Germany",
+      "state": "NRW",
+      "city": "Düsseldorf",
+      "neighborhood": "Bilk"
+    },
+    "employer": "N26",
+    "role": "Research Scientist",
+    "situation": [
+      "solo"
+    ],
+    "stage": "long-term",
+    "yearsInCity": 6,
+    "verified": {
+      "linkedin": true,
+      "employer": false,
+      "verifiedLocal": false
+    },
+    "contributesTo": [
+      "buy/sell",
+      "visa/PR"
+    ],
+    "invitedBy": null,
+    "vouchedBy": []
+  },
+  {
+    "id": "u002",
+    "_demo": true,
+    "name": "Sergio Martínez",
+    "initials": "SM",
+    "originCountry": "Spain",
+    "originRegion": "EU",
+    "geo": {
+      "country": "Germany",
+      "state": "NRW",
+      "city": "Düsseldorf",
+      "neighborhood": "Pempelfort"
+    },
+    "employer": "Microsoft",
+    "role": "Product Manager",
+    "situation": [
+      "LGBTQ+",
+      "retiree"
+    ],
+    "stage": "long-term",
+    "yearsInCity": 4,
+    "verified": {
+      "linkedin": true,
+      "employer": true,
+      "verifiedLocal": true
+    },
+    "contributesTo": [
+      "tax",
+      "visa/PR"
+    ],
+    "invitedBy": null,
+    "vouchedBy": []
+  },
+  {
+    "id": "u010",
+    "_demo": true,
+    "name": "Ryan Johnson",
+    "initials": "RJ",
+    "originCountry": "USA",
+    "originRegion": "North America",
+    "geo": {
+      "country": "Germany",
+      "state": "NRW",
+      "city": "Düsseldorf",
+      "neighborhood": "Pempelfort"
+    },
+    "employer": "Fresenius",
+    "role": "Supply Chain Manager",
+    "situation": [
+      "student"
+    ],
+    "stage": "long-term",
+    "yearsInCity": 11,
+    "verified": {
+      "linkedin": true,
+      "employer": true,
+      "verifiedLocal": true
+    },
+    "contributesTo": [
+      "childcare",
+      "events",
+      "jobs",
+      "tax"
+    ],
+    "invitedBy": "u009",
+    "vouchedBy": [
+      "u002",
+      "u003",
+      "u007"
+    ]
+  },
+  {
+    "id": "u018",
+    "_demo": true,
+    "name": "Ayşe Yılmaz",
+    "initials": "AY",
+    "originCountry": "Turkey",
+    "originRegion": "Türkiye & MENA",
+    "geo": {
+      "country": "Germany",
+      "state": "NRW",
+      "city": "Düsseldorf",
+      "neighborhood": "Flingern"
+    },
+    "employer": null,
+    "role": "Homemaker",
+    "situation": [
+      "family",
+      "homemaker"
+    ],
+    "stage": "settling in",
+    "yearsInCity": 1,
+    "verified": {
+      "linkedin": true,
+      "employer": false,
+      "verifiedLocal": false
+    },
+    "contributesTo": [
+      "events",
+      "healthcare",
+      "housing",
+      "tax"
+    ],
+    "invitedBy": "u006",
+    "vouchedBy": [
+      "u009",
+      "u002"
+    ]
+  },
+  {
+    "id": "u020",
+    "_demo": true,
+    "name": "Rafael Silva",
+    "initials": "RS",
+    "originCountry": "Brazil",
+    "originRegion": "LatAm",
+    "geo": {
+      "country": "Germany",
+      "state": "NRW",
+      "city": "Düsseldorf",
+      "neighborhood": "Bilk"
+    },
+    "employer": "Siemens",
+    "role": "Supply Chain Manager",
+    "situation": [
+      "retiree"
+    ],
+    "stage": "settling in",
+    "yearsInCity": 3,
+    "verified": {
+      "linkedin": true,
+      "employer": true,
+      "verifiedLocal": false
+    },
+    "contributesTo": [
+      "banking",
+      "housing",
+      "language",
+      "schools"
+    ],
+    "invitedBy": "u016",
+    "vouchedBy": []
+  },
+  {
+    "id": "u022",
+    "_demo": true,
+    "name": "Mert Şahin",
+    "initials": "MŞ",
+    "originCountry": "Turkey",
+    "originRegion": "Türkiye & MENA",
+    "geo": {
+      "country": "Germany",
+      "state": "NRW",
+      "city": "Düsseldorf",
+      "neighborhood": "Golzheim"
+    },
+    "employer": "Deloitte",
+    "role": "Data Scientist",
+    "situation": [
+      "student"
+    ],
+    "stage": "settling in",
+    "yearsInCity": 2,
+    "verified": {
+      "linkedin": true,
+      "employer": true,
+      "verifiedLocal": false
+    },
+    "contributesTo": [
+      "banking",
+      "healthcare",
+      "jobs"
+    ],
+    "invitedBy": "u020",
+    "vouchedBy": []
+  },
+  {
+    "id": "u023",
+    "_demo": true,
+    "name": "Piotr Lewandowski",
+    "initials": "PL",
+    "originCountry": "Poland",
+    "originRegion": "EU",
+    "geo": {
+      "country": "Germany",
+      "state": "NRW",
+      "city": "Düsseldorf",
+      "neighborhood": "Pempelfort"
+    },
+    "employer": "Fresenius",
+    "role": "Marketing Lead",
+    "situation": [
+      "retiree"
+    ],
+    "stage": "settling in",
+    "yearsInCity": 2,
+    "verified": {
+      "linkedin": true,
+      "employer": true,
+      "verifiedLocal": false
+    },
+    "contributesTo": [
+      "healthcare",
+      "tax"
+    ],
+    "invitedBy": "u003",
+    "vouchedBy": [
+      "u014",
+      "u017"
+    ]
+  },
+  {
+    "id": "u024",
+    "_demo": true,
+    "name": "Merve Demir",
+    "initials": "MD",
+    "originCountry": "Turkey",
+    "originRegion": "Türkiye & MENA",
+    "geo": {
+      "country": "Germany",
+      "state": "NRW",
+      "city": "Düsseldorf",
+      "neighborhood": "Flingern"
+    },
+    "employer": "Ericsson",
+    "role": "Consultant",
+    "situation": [
+      "family",
+      "mom"
+    ],
+    "stage": "just arrived",
+    "yearsInCity": 1,
+    "verified": {
+      "linkedin": true,
+      "employer": true,
+      "verifiedLocal": false
+    },
+    "contributesTo": [
+      "car/license",
+      "language"
+    ],
+    "invitedBy": "u017",
+    "vouchedBy": [
+      "u014",
+      "u020",
+      "u003"
+    ]
+  },
+  {
+    "id": "u025",
+    "_demo": true,
+    "name": "Magda Wójcik",
+    "initials": "MW",
+    "originCountry": "Poland",
+    "originRegion": "EU",
+    "geo": {
+      "country": "Germany",
+      "state": "NRW",
+      "city": "Düsseldorf",
+      "neighborhood": "Pempelfort"
+    },
+    "employer": "Delivery Hero",
+    "role": "Solutions Architect",
+    "situation": [
+      "retiree"
+    ],
+    "stage": "long-term",
+    "yearsInCity": 8,
+    "verified": {
+      "linkedin": true,
+      "employer": true,
+      "verifiedLocal": true
+    },
+    "contributesTo": [
+      "housing",
+      "jobs",
+      "language"
+    ],
+    "invitedBy": "u005",
+    "vouchedBy": [
+      "u022",
+      "u003"
+    ]
+  },
+  {
+    "id": "u030",
+    "_demo": true,
+    "name": "Thiago Souza",
+    "initials": "TS",
+    "originCountry": "Brazil",
+    "originRegion": "LatAm",
+    "geo": {
+      "country": "Germany",
+      "state": "NRW",
+      "city": "Düsseldorf",
+      "neighborhood": "Pempelfort"
+    },
+    "employer": "Fresenius",
+    "role": "UX Designer",
+    "situation": [
+      "retiree"
+    ],
+    "stage": "long-term",
+    "yearsInCity": 7,
+    "verified": {
+      "linkedin": true,
+      "employer": true,
+      "verifiedLocal": false
+    },
+    "contributesTo": [
+      "banking",
+      "car/license",
+      "healthcare",
+      "jobs"
+    ],
+    "invitedBy": "u006",
+    "vouchedBy": [
+      "u012"
+    ]
+  },
+  {
+    "id": "u031",
+    "_demo": true,
+    "name": "Pablo García",
+    "initials": "PG",
+    "originCountry": "Spain",
+    "originRegion": "EU",
+    "geo": {
+      "country": "Germany",
+      "state": "NRW",
+      "city": "Düsseldorf",
+      "neighborhood": "Golzheim"
+    },
+    "employer": "N26",
+    "role": "UX Designer",
+    "situation": [
+      "student"
+    ],
+    "stage": "just arrived",
+    "yearsInCity": 0,
+    "verified": {
+      "linkedin": true,
+      "employer": true,
+      "verifiedLocal": false
+    },
+    "contributesTo": [
+      "car/license",
+      "visa/PR"
+    ],
+    "invitedBy": "u030",
+    "vouchedBy": [
+      "u012"
+    ]
+  },
+  {
+    "id": "u035",
+    "_demo": true,
+    "name": "Wei Zhang",
+    "initials": "WZ",
+    "originCountry": "China",
+    "originRegion": "East Asia",
+    "geo": {
+      "country": "Germany",
+      "state": "NRW",
+      "city": "Düsseldorf",
+      "neighborhood": "Oberkassel"
+    },
+    "employer": "Fresenius",
+    "role": "Software Engineer",
+    "situation": [
+      "family",
+      "sports"
+    ],
+    "stage": "long-term",
+    "yearsInCity": 3,
+    "verified": {
+      "linkedin": true,
+      "employer": true,
+      "verifiedLocal": false
+    },
+    "contributesTo": [
+      "buy/sell",
+      "childcare"
+    ],
+    "invitedBy": "u006",
+    "vouchedBy": [
+      "u012",
+      "u011",
+      "u023",
+      "u003"
+    ]
+  },
+  {
+    "id": "u038",
+    "_demo": true,
+    "name": "Ana Gómez",
+    "initials": "AG",
+    "originCountry": "Spain",
+    "originRegion": "EU",
+    "geo": {
+      "country": "Germany",
+      "state": "NRW",
+      "city": "Düsseldorf",
+      "neighborhood": "Flingern"
+    },
+    "employer": "Zalando",
+    "role": "Marketing Lead",
+    "situation": [
+      "student"
+    ],
+    "stage": "long-term",
+    "yearsInCity": 11,
+    "verified": {
+      "linkedin": true,
+      "employer": true,
+      "verifiedLocal": true
+    },
+    "contributesTo": [
+      "healthcare",
+      "jobs",
+      "tax"
+    ],
+    "invitedBy": "u032",
+    "vouchedBy": [
+      "u019",
+      "u020",
+      "u031",
+      "u016"
+    ]
+  },
+  {
+    "id": "u040",
+    "_demo": true,
+    "name": "Mei Wang",
+    "initials": "MW",
+    "originCountry": "China",
+    "originRegion": "East Asia",
+    "geo": {
+      "country": "Germany",
+      "state": "NRW",
+      "city": "Düsseldorf",
+      "neighborhood": "Bilk"
+    },
+    "employer": "Fresenius",
+    "role": "UX Designer",
+    "situation": [
+      "LGBTQ+",
+      "student"
+    ],
+    "stage": "long-term",
+    "yearsInCity": 11,
+    "verified": {
+      "linkedin": true,
+      "employer": true,
+      "verifiedLocal": true
+    },
+    "contributesTo": [
+      "events",
+      "healthcare",
+      "jobs",
+      "money transfer"
+    ],
+    "invitedBy": "u004",
+    "vouchedBy": [
+      "u030"
+    ]
+  },
+  {
+    "id": "u042",
+    "_demo": true,
+    "name": "Hao Li",
+    "initials": "HL",
+    "originCountry": "China",
+    "originRegion": "East Asia",
+    "geo": {
+      "country": "Germany",
+      "state": "NRW",
+      "city": "Düsseldorf",
+      "neighborhood": "Golzheim"
+    },
+    "employer": "Fresenius",
+    "role": "DevOps Engineer",
+    "situation": [
+      "solo"
+    ],
+    "stage": "long-term",
+    "yearsInCity": 12,
+    "verified": {
+      "linkedin": true,
+      "employer": true,
+      "verifiedLocal": true
+    },
+    "contributesTo": [
+      "healthcare",
+      "housing",
+      "language",
+      "schools"
+    ],
+    "invitedBy": "u039",
+    "vouchedBy": [
+      "u021"
+    ]
+  },
+  {
+    "id": "u046",
+    "_demo": true,
+    "name": "Marco Russo",
+    "initials": "MR",
+    "originCountry": "Italy",
+    "originRegion": "EU",
+    "geo": {
+      "country": "Germany",
+      "state": "NRW",
+      "city": "Düsseldorf",
+      "neighborhood": "Pempelfort"
+    },
+    "employer": "Vodafone",
+    "role": "Research Scientist",
+    "situation": [
+      "retiree"
+    ],
+    "stage": "long-term",
+    "yearsInCity": 10,
+    "verified": {
+      "linkedin": true,
+      "employer": true,
+      "verifiedLocal": true
+    },
+    "contributesTo": [
+      "events",
+      "healthcare",
+      "housing",
+      "jobs"
+    ],
+    "invitedBy": "u018",
+    "vouchedBy": [
+      "u016",
+      "u010",
+      "u007"
+    ]
+  },
+  {
+    "id": "u047",
+    "_demo": true,
+    "name": "Elif Yılmaz",
+    "initials": "EY",
+    "originCountry": "Turkey",
+    "originRegion": "Türkiye & MENA",
+    "geo": {
+      "country": "Germany",
+      "state": "NRW",
+      "city": "Düsseldorf",
+      "neighborhood": "Pempelfort"
+    },
+    "employer": "Nokia",
+    "role": "Supply Chain Manager",
+    "situation": [
+      "student"
+    ],
+    "stage": "settling in",
+    "yearsInCity": 2,
+    "verified": {
+      "linkedin": true,
+      "employer": true,
+      "verifiedLocal": false
+    },
+    "contributesTo": [
+      "money transfer",
+      "schools"
+    ],
+    "invitedBy": "u004",
+    "vouchedBy": [
+      "u026",
+      "u041"
+    ]
+  },
+  {
+    "id": "u048",
+    "_demo": true,
+    "name": "Beatriz Lima",
+    "initials": "BL",
+    "originCountry": "Brazil",
+    "originRegion": "LatAm",
+    "geo": {
+      "country": "Germany",
+      "state": "NRW",
+      "city": "Düsseldorf",
+      "neighborhood": "Pempelfort"
+    },
+    "employer": "BMW",
+    "role": "Software Engineer",
+    "situation": [
+      "retiree",
+      "sports"
+    ],
+    "stage": "just arrived",
+    "yearsInCity": 0,
+    "verified": {
+      "linkedin": true,
+      "employer": true,
+      "verifiedLocal": false
+    },
+    "contributesTo": [
+      "childcare",
+      "healthcare",
+      "housing",
+      "money transfer"
+    ],
+    "invitedBy": "u027",
+    "vouchedBy": [
+      "u011"
+    ]
+  },
+  {
+    "id": "u050",
+    "_demo": true,
+    "name": "Jessica Williams",
+    "initials": "JW",
+    "originCountry": "USA",
+    "originRegion": "North America",
+    "geo": {
+      "country": "Germany",
+      "state": "NRW",
+      "city": "Düsseldorf",
+      "neighborhood": "Flingern"
+    },
+    "employer": "Bayer",
+    "role": "Research Scientist",
+    "situation": [
+      "student"
+    ],
+    "stage": "settling in",
+    "yearsInCity": 2,
+    "verified": {
+      "linkedin": true,
+      "employer": true,
+      "verifiedLocal": false
+    },
+    "contributesTo": [
+      "childcare",
+      "events",
+      "schools"
+    ],
+    "invitedBy": "u032",
+    "vouchedBy": [
+      "u030",
+      "u033",
+      "u020",
+      "u002"
+    ]
+  },
+  {
+    "id": "u051",
+    "_demo": true,
+    "name": "Jakub Kamiński",
+    "initials": "JK",
+    "originCountry": "Poland",
+    "originRegion": "EU",
+    "geo": {
+      "country": "Germany",
+      "state": "NRW",
+      "city": "Düsseldorf",
+      "neighborhood": "Flingern"
+    },
+    "employer": "Deutsche Telekom",
+    "role": "Software Engineer",
+    "situation": [
+      "solo"
+    ],
+    "stage": "settling in",
+    "yearsInCity": 3,
+    "verified": {
+      "linkedin": true,
+      "employer": true,
+      "verifiedLocal": false
+    },
+    "contributesTo": [
+      "car/license",
+      "jobs",
+      "tax"
+    ],
+    "invitedBy": "u006",
+    "vouchedBy": [
+      "u034",
+      "u031",
+      "u017"
+    ]
+  },
+  {
+    "id": "u052",
+    "_demo": true,
+    "name": "Jessica Davis",
+    "initials": "JD",
+    "originCountry": "USA",
+    "originRegion": "North America",
+    "geo": {
+      "country": "Germany",
+      "state": "NRW",
+      "city": "Düsseldorf",
+      "neighborhood": "Bilk"
+    },
+    "employer": "Ericsson",
+    "role": "Solutions Architect",
+    "situation": [
+      "LGBTQ+",
+      "solo"
+    ],
+    "stage": "long-term",
+    "yearsInCity": 7,
+    "verified": {
+      "linkedin": true,
+      "employer": true,
+      "verifiedLocal": true
+    },
+    "contributesTo": [
+      "buy/sell",
+      "housing",
+      "language",
+      "tax"
+    ],
+    "invitedBy": "u014",
+    "vouchedBy": [
+      "u024",
+      "u004",
+      "u020",
+      "u033"
+    ]
+  },
+  {
+    "id": "u057",
+    "_demo": true,
+    "name": "David Davis",
+    "initials": "DD",
+    "originCountry": "USA",
+    "originRegion": "North America",
+    "geo": {
+      "country": "Germany",
+      "state": "NRW",
+      "city": "Düsseldorf",
+      "neighborhood": "Pempelfort"
+    },
+    "employer": "Accenture",
+    "role": "Financial Analyst",
+    "situation": [
+      "sports",
+      "student"
+    ],
+    "stage": "just arrived",
+    "yearsInCity": 0,
+    "verified": {
+      "linkedin": true,
+      "employer": true,
+      "verifiedLocal": false
+    },
+    "contributesTo": [
+      "car/license",
+      "housing"
+    ],
+    "invitedBy": "u005",
+    "vouchedBy": [
+      "u034",
+      "u030",
+      "u050"
+    ]
+  },
+  {
+    "id": "u061",
+    "_demo": true,
+    "name": "Katarzyna Kamiński",
+    "initials": "KK",
+    "originCountry": "Poland",
+    "originRegion": "EU",
+    "geo": {
+      "country": "Germany",
+      "state": "NRW",
+      "city": "Düsseldorf",
+      "neighborhood": "Bilk"
+    },
+    "employer": "Zalando",
+    "role": "Research Scientist",
+    "situation": [
+      "LGBTQ+",
+      "family"
+    ],
+    "stage": "long-term",
+    "yearsInCity": 4,
+    "verified": {
+      "linkedin": true,
+      "employer": true,
+      "verifiedLocal": true
+    },
+    "contributesTo": [
+      "buy/sell",
+      "housing",
+      "jobs",
+      "visa/PR"
+    ],
+    "invitedBy": "u049",
+    "vouchedBy": [
+      "u013"
+    ]
+  },
+  {
+    "id": "u063",
+    "_demo": true,
+    "name": "Lucía Sánchez",
+    "initials": "LS",
+    "originCountry": "Spain",
+    "originRegion": "EU",
+    "geo": {
+      "country": "Germany",
+      "state": "NRW",
+      "city": "Düsseldorf",
+      "neighborhood": "Pempelfort"
+    },
+    "employer": "Delivery Hero",
+    "role": "Supply Chain Manager",
+    "situation": [
+      "retiree"
+    ],
+    "stage": "settling in",
+    "yearsInCity": 2,
+    "verified": {
+      "linkedin": true,
+      "employer": true,
+      "verifiedLocal": false
+    },
+    "contributesTo": [
+      "childcare",
+      "jobs",
+      "money transfer",
+      "schools"
+    ],
+    "invitedBy": "u046",
+    "vouchedBy": [
+      "u053",
+      "u031"
+    ]
+  },
+  {
+    "id": "u064",
+    "_demo": true,
+    "name": "Ying Chen",
+    "initials": "YC",
+    "originCountry": "China",
+    "originRegion": "East Asia",
+    "geo": {
+      "country": "Germany",
+      "state": "NRW",
+      "city": "Düsseldorf",
+      "neighborhood": "Golzheim"
+    },
+    "employer": "N26",
+    "role": "Marketing Lead",
+    "situation": [
+      "LGBTQ+",
+      "solo",
+      "sports"
+    ],
+    "stage": "long-term",
+    "yearsInCity": 10,
+    "verified": {
+      "linkedin": true,
+      "employer": false,
+      "verifiedLocal": true
+    },
+    "contributesTo": [
+      "jobs",
+      "tax"
+    ],
+    "invitedBy": "u034",
+    "vouchedBy": [
+      "u010",
+      "u040",
+      "u059"
+    ]
+  },
+  {
+    "id": "u067",
+    "_demo": true,
+    "name": "Marek Kamiński",
+    "initials": "MK",
+    "originCountry": "Poland",
+    "originRegion": "EU",
+    "geo": {
+      "country": "Germany",
+      "state": "NRW",
+      "city": "Düsseldorf",
+      "neighborhood": "Oberkassel"
+    },
+    "employer": "BASF",
+    "role": "Financial Analyst",
+    "situation": [
+      "retiree",
+      "sports"
+    ],
+    "stage": "just arrived",
+    "yearsInCity": 0,
+    "verified": {
+      "linkedin": true,
+      "employer": true,
+      "verifiedLocal": false
+    },
+    "contributesTo": [
+      "healthcare",
+      "language"
+    ],
+    "invitedBy": "u039",
+    "vouchedBy": [
+      "u045",
+      "u066",
+      "u064",
+      "u040"
+    ]
+  },
+  {
+    "id": "u068",
+    "_demo": true,
+    "name": "Elif Arık",
+    "initials": "EA",
+    "originCountry": "Turkey",
+    "originRegion": "Türkiye & MENA",
+    "geo": {
+      "country": "Germany",
+      "state": "NRW",
+      "city": "Düsseldorf",
+      "neighborhood": "Golzheim"
+    },
+    "employer": "BMW",
+    "role": "Financial Analyst",
+    "situation": [
+      "LGBTQ+",
+      "solo"
+    ],
+    "stage": "just arrived",
+    "yearsInCity": 0,
+    "verified": {
+      "linkedin": true,
+      "employer": true,
+      "verifiedLocal": false
+    },
+    "contributesTo": [
+      "buy/sell",
+      "tax"
+    ],
+    "invitedBy": "u061",
+    "vouchedBy": []
+  },
+  {
+    "id": "u072",
+    "_demo": true,
+    "name": "Deniz Yılmaz",
+    "initials": "DY",
+    "originCountry": "Turkey",
+    "originRegion": "Türkiye & MENA",
+    "geo": {
+      "country": "Germany",
+      "state": "NRW",
+      "city": "Düsseldorf",
+      "neighborhood": "Pempelfort"
+    },
+    "employer": "DHL",
+    "role": "Supply Chain Manager",
+    "situation": [
+      "solo"
+    ],
+    "stage": "just arrived",
+    "yearsInCity": 0,
+    "verified": {
+      "linkedin": true,
+      "employer": true,
+      "verifiedLocal": false
+    },
+    "contributesTo": [
+      "events",
+      "tax",
+      "visa/PR"
+    ],
+    "invitedBy": "u062",
+    "vouchedBy": [
+      "u069"
+    ]
+  },
+  {
+    "id": "u073",
+    "_demo": true,
+    "name": "Diego Gómez",
+    "initials": "DG",
+    "originCountry": "Spain",
+    "originRegion": "EU",
+    "geo": {
+      "country": "Germany",
+      "state": "NRW",
+      "city": "Düsseldorf",
+      "neighborhood": "Oberkassel"
+    },
+    "employer": "BMW",
+    "role": "DevOps Engineer",
+    "situation": [
+      "solo"
+    ],
+    "stage": "settling in",
+    "yearsInCity": 2,
+    "verified": {
+      "linkedin": true,
+      "employer": true,
+      "verifiedLocal": false
+    },
+    "contributesTo": [
+      "banking",
+      "healthcare",
+      "money transfer",
+      "tax"
+    ],
+    "invitedBy": "u049",
+    "vouchedBy": [
+      "u032"
+    ]
+  },
+  {
+    "id": "u077",
+    "_demo": true,
+    "name": "Chidi Okafor",
+    "initials": "CO",
+    "originCountry": "Nigeria",
+    "originRegion": "Africa",
+    "geo": {
+      "country": "Germany",
+      "state": "NRW",
+      "city": "Düsseldorf",
+      "neighborhood": "Golzheim"
+    },
+    "employer": "Accenture",
+    "role": "Financial Analyst",
+    "situation": [
+      "LGBTQ+",
+      "family",
+      "mom"
+    ],
+    "stage": "settling in",
+    "yearsInCity": 1,
+    "verified": {
+      "linkedin": true,
+      "employer": true,
+      "verifiedLocal": false
+    },
+    "contributesTo": [
+      "car/license",
+      "language"
+    ],
+    "invitedBy": "u027",
+    "vouchedBy": [
+      "u043",
+      "u063",
+      "u069",
+      "u050"
+    ]
+  },
+  {
+    "id": "u080",
+    "_demo": true,
+    "name": "Ramon Aquino",
+    "initials": "RA",
+    "originCountry": "Philippines",
+    "originRegion": "Southeast Asia",
+    "geo": {
+      "country": "Germany",
+      "state": "NRW",
+      "city": "Düsseldorf",
+      "neighborhood": "Oberkassel"
+    },
+    "employer": "DHL",
+    "role": "Solutions Architect",
+    "situation": [
+      "solo",
+      "sports"
+    ],
+    "stage": "long-term",
+    "yearsInCity": 8,
+    "verified": {
+      "linkedin": true,
+      "employer": true,
+      "verifiedLocal": true
+    },
+    "contributesTo": [
+      "car/license",
+      "events"
+    ],
+    "invitedBy": "u034",
+    "vouchedBy": [
+      "u063",
+      "u025",
+      "u032",
+      "u037"
+    ]
+  },
+  {
+    "id": "u082",
+    "_demo": true,
+    "name": "Ananya Iyer",
+    "initials": "AI",
+    "originCountry": "India",
+    "originRegion": "South Asia",
+    "geo": {
+      "country": "Germany",
+      "state": "NRW",
+      "city": "Düsseldorf",
+      "neighborhood": "Golzheim"
+    },
+    "employer": null,
+    "role": "Homemaker",
+    "situation": [
+      "family",
+      "homemaker",
+      "mom"
+    ],
+    "stage": "settling in",
+    "yearsInCity": 2,
+    "verified": {
+      "linkedin": true,
+      "employer": false,
+      "verifiedLocal": false
+    },
+    "contributesTo": [
+      "childcare",
+      "language",
+      "money transfer",
+      "visa/PR"
+    ],
+    "invitedBy": "u037",
+    "vouchedBy": [
+      "u064"
+    ]
+  },
+  {
+    "id": "u087",
+    "_demo": true,
+    "name": "Elif Demir",
+    "initials": "ED",
+    "originCountry": "Turkey",
+    "originRegion": "Türkiye & MENA",
+    "geo": {
+      "country": "Germany",
+      "state": "NRW",
+      "city": "Düsseldorf",
+      "neighborhood": "Flingern"
+    },
+    "employer": null,
+    "role": "Homemaker",
+    "situation": [
+      "family",
+      "homemaker",
+      "mom",
+      "sports"
+    ],
+    "stage": "long-term",
+    "yearsInCity": 8,
+    "verified": {
+      "linkedin": false,
+      "employer": false,
+      "verifiedLocal": false
+    },
+    "contributesTo": [
+      "buy/sell",
+      "childcare"
+    ],
+    "invitedBy": "u037",
+    "vouchedBy": []
+  },
+  {
+    "id": "u091",
+    "_demo": true,
+    "name": "Thiago Oliveira",
+    "initials": "TO",
+    "originCountry": "Brazil",
+    "originRegion": "LatAm",
+    "geo": {
+      "country": "Germany",
+      "state": "NRW",
+      "city": "Düsseldorf",
+      "neighborhood": "Golzheim"
+    },
+    "employer": "Bayer",
+    "role": "Financial Analyst",
+    "situation": [
+      "LGBTQ+",
+      "couple"
+    ],
+    "stage": "settling in",
+    "yearsInCity": 2,
+    "verified": {
+      "linkedin": true,
+      "employer": true,
+      "verifiedLocal": false
+    },
+    "contributesTo": [
+      "buy/sell",
+      "childcare",
+      "housing"
+    ],
+    "invitedBy": "u076",
+    "vouchedBy": [
+      "u032"
+    ]
+  },
+  {
+    "id": "u092",
+    "_demo": true,
+    "name": "Laura Smith",
+    "initials": "LS",
+    "originCountry": "USA",
+    "originRegion": "North America",
+    "geo": {
+      "country": "Germany",
+      "state": "NRW",
+      "city": "Düsseldorf",
+      "neighborhood": "Flingern"
+    },
+    "employer": "Mercedes-Benz",
+    "role": "Supply Chain Manager",
+    "situation": [
+      "retiree"
+    ],
+    "stage": "just arrived",
+    "yearsInCity": 1,
+    "verified": {
+      "linkedin": true,
+      "employer": true,
+      "verifiedLocal": false
+    },
+    "contributesTo": [
+      "jobs",
+      "schools"
+    ],
+    "invitedBy": "u007",
+    "vouchedBy": [
+      "u030",
+      "u083",
+      "u031",
+      "u008"
+    ]
+  },
+  {
+    "id": "u093",
+    "_demo": true,
+    "name": "Marina Souza",
+    "initials": "MS",
+    "originCountry": "Brazil",
+    "originRegion": "LatAm",
+    "geo": {
+      "country": "Germany",
+      "state": "NRW",
+      "city": "Düsseldorf",
+      "neighborhood": "Flingern"
+    },
+    "employer": "Bayer",
+    "role": "Research Scientist",
+    "situation": [
+      "LGBTQ+",
+      "retiree",
+      "sports"
+    ],
+    "stage": "just arrived",
+    "yearsInCity": 1,
+    "verified": {
+      "linkedin": true,
+      "employer": true,
+      "verifiedLocal": false
+    },
+    "contributesTo": [
+      "banking",
+      "jobs",
+      "money transfer",
+      "visa/PR"
+    ],
+    "invitedBy": "u013",
+    "vouchedBy": [
+      "u044",
+      "u062",
+      "u014"
+    ]
+  },
+  {
+    "id": "u096",
+    "_demo": true,
+    "name": "Divine Santos",
+    "initials": "DS",
+    "originCountry": "Philippines",
+    "originRegion": "Southeast Asia",
+    "geo": {
+      "country": "Germany",
+      "state": "NRW",
+      "city": "Düsseldorf",
+      "neighborhood": "Pempelfort"
+    },
+    "employer": "Amazon",
+    "role": "Project Lead",
+    "situation": [
+      "retiree"
+    ],
+    "stage": "settling in",
+    "yearsInCity": 1,
+    "verified": {
+      "linkedin": true,
+      "employer": true,
+      "verifiedLocal": false
+    },
+    "contributesTo": [
+      "car/license",
+      "events"
+    ],
+    "invitedBy": "u084",
+    "vouchedBy": [
+      "u062",
+      "u085",
+      "u026"
+    ]
+  },
+  {
+    "id": "u100",
+    "_demo": true,
+    "name": "Zainab Okafor",
+    "initials": "ZO",
+    "originCountry": "Nigeria",
+    "originRegion": "Africa",
+    "geo": {
+      "country": "Germany",
+      "state": "NRW",
+      "city": "Düsseldorf",
+      "neighborhood": "Flingern"
+    },
+    "employer": "Google",
+    "role": "HR Business Partner",
+    "situation": [
+      "family"
+    ],
+    "stage": "just arrived",
+    "yearsInCity": 0,
+    "verified": {
+      "linkedin": true,
+      "employer": true,
+      "verifiedLocal": false
+    },
+    "contributesTo": [
+      "housing",
+      "money transfer"
+    ],
+    "invitedBy": "u005",
+    "vouchedBy": [
+      "u055"
+    ]
+  }
+]
