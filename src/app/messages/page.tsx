@@ -6,6 +6,14 @@ import EmptyState from "@/components/EmptyState";
 const CONTEXT_LABEL: Record<string, string> = {
   question_option: "About a Knowledge answer",
   resource: "About a Resource",
+  housing_listing: "About your Housing listing",
+  marketplace_listing: "About your Marketplace listing",
+};
+
+const CONTEXT_LINK: Record<string, (id: string) => string> = {
+  housing_listing: (id) => `/housing/${id}`,
+  resource: () => "/resources",
+  marketplace_listing: () => "/marketplace",
 };
 
 export default async function MessagesPage() {
@@ -37,7 +45,7 @@ export default async function MessagesPage() {
     <main className="mx-auto w-full max-w-2xl flex-1 px-4 py-10">
       <h1 className="font-serif text-2xl text-[var(--color-ink)]">Messages</h1>
       <p className="mt-1 text-sm text-[var(--color-neutral)]">
-        People asking you about something you voted on or endorsed.
+        People asking about something you posted, voted on, or endorsed.
       </p>
 
       <div className="mt-6">
@@ -56,8 +64,8 @@ export default async function MessagesPage() {
                   {m.context_type === "question_option" && questionIdByOption[m.context_id ?? ""] && (
                     <> · <Link href={`/knowledge/${questionIdByOption[m.context_id as string]}`} className="text-[var(--color-primary-deep)] hover:underline">view</Link></>
                   )}
-                  {m.context_type === "resource" && (
-                    <> · <Link href="/resources" className="text-[var(--color-primary-deep)] hover:underline">view</Link></>
+                  {m.context_type && m.context_type !== "question_option" && CONTEXT_LINK[m.context_type] && (
+                    <> · <Link href={CONTEXT_LINK[m.context_type](m.context_id ?? "")} className="text-[var(--color-primary-deep)] hover:underline">view</Link></>
                   )}
                 </p>
               </li>

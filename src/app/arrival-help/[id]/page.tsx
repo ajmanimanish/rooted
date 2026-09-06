@@ -122,11 +122,9 @@ export default async function ArrivalHelpDetailPage({
           ) : (
             <p className="rounded-lg border border-dashed border-[var(--color-neutral-border)] px-4 py-3 text-sm text-[var(--color-neutral)]">
               Offering arrival help needs verified identity and at least 2 vouches from the
-              community — the highest trust bar on Rooted.{" "}
-              <Link href="/verify" className="font-medium text-[var(--color-primary-deep)] hover:underline">
-                Get verified
-              </Link>
-              .
+              community — the highest trust bar on Rooted. Use the{" "}
+              <span className="font-medium text-[var(--color-ink)]">Verify me</span> button in the
+              top bar and ask people you know to vouch for you.
             </p>
           )}
         </div>

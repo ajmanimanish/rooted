@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import NavBar from "@/components/NavBar";
 import DemoDataBanner from "@/components/DemoDataBanner";
+import SiteFooter from "@/components/SiteFooter";
 
 export const metadata: Metadata = {
   title: "Rooted",
@@ -15,6 +16,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <DemoDataBanner />
         <NavBar />
         {children}
+        <SiteFooter />
       </body>
     </html>
   );

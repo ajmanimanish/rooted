@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { createClient } from "@/lib/supabase/server";
 import CreateMenu from "@/components/CreateMenu";
+import VerifyMeButton from "@/components/VerifyMeButton";
 
 const SECTIONS = [
   { href: "/groups", label: "Groups" },
@@ -30,8 +31,9 @@ export default async function NavBar() {
   return (
     <header className="sticky top-0 z-20 border-b border-[var(--color-neutral-border)] bg-[var(--color-surface)]/90 backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center gap-6 px-4 py-3">
-        <Link href="/" className="font-serif text-lg font-semibold text-[var(--color-primary-deep)]">
-          Rooted
+        <Link href="/" className="flex items-baseline gap-2">
+          <span className="font-serif text-lg font-semibold text-[var(--color-primary-deep)]">Rooted</span>
+          <span className="text-sm text-[var(--color-neutral-light)]">Düsseldorf</span>
         </Link>
 
         <nav className="hidden flex-1 items-center gap-5 md:flex">
@@ -49,14 +51,7 @@ export default async function NavBar() {
         <div className="ml-auto flex items-center gap-3">
           {user && <CreateMenu />}
 
-          {!isVerified && (
-            <Link
-              href="/verify"
-              className="rounded-full bg-[var(--color-accent)] px-4 py-1.5 text-sm font-medium text-white hover:opacity-90"
-            >
-              Verify me
-            </Link>
-          )}
+          {!isVerified && <VerifyMeButton isSignedIn={Boolean(user)} />}
 
           {user ? (
             <>
